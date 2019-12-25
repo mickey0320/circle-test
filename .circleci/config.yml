@@ -8,9 +8,16 @@ jobs:
         - master
     steps:
       - checkout
+      - restore_cache
+        keys: 
+          - dependencies 
       - run:
           name: Install
           command: yarn install
+      - save_cache:
+        paths:
+          - node_modules
+        key: dependencies
       - run:
           name: Build
           command: yarn build
