@@ -4,5 +4,5 @@ jobs:
     docker:
       - image: circle/node:10
     step:
-      - checkout
       - run: echo "hello circle"
+      - run: npm -v
