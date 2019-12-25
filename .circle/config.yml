@@ -1,0 +1,8 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circle/node:10
+    step:
+      - checkout
+      - run: echo "hello circle"
