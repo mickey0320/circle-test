@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circle/node:10
-    step:
+      - image: circleci/node:10
+    steps:
       - run: echo "hello circle"
       - run: npm -v
